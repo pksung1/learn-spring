@@ -2,7 +2,9 @@ package com.example.bank_example.datasource.mock
 
 import com.example.bank_example.datasource.BankDataSource
 import com.example.bank_example.model.Bank
+import org.springframework.stereotype.Repository
 
+@Repository
 class MockBankDataSource : BankDataSource {
 
     override fun retrieveBanks(): Collection<Bank> {
