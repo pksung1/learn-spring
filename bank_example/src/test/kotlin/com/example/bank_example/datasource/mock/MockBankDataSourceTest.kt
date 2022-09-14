@@ -33,4 +33,12 @@ internal class MockBankDataSourceTest {
         assertThat(banks).anyMatch { it.trust != 0.0}
         assertThat(banks).allMatch { it.transactionFee != 0 }
     }
+
+    @Test
+    fun `find one bank`() {
+        val accountNumber = "938-429032-4823"
+        val bank = mockDataSource.retrieveBank(accountNumber)
+
+        assertThat(bank.accountNumber).isEqualTo(accountNumber)
+    }
 }

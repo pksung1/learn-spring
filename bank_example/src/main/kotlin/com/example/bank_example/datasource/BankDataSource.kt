@@ -5,4 +5,5 @@ import com.example.bank_example.model.Bank
 interface BankDataSource {
     fun retrieveBanks(): Collection<Bank>
 
+    fun retrieveBank(accountNumber: String): Bank
 }
